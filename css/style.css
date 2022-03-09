@@ -1,0 +1,262 @@
+:root {
+  --red: hsl(0,100%,74%);
+  --green: hsl(154, 59%, 51%);
+  --green-hover: hsla(154, 59%, 51%, 0.748);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%) ;
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--red);
+  width: 100vw;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 95% 5%;
+      grid-template-rows: 95% 5%;
+  place-items: center;
+}
+
+body h1, body p, body span {
+  color: white;
+}
+
+body input {
+  border: 1px solid var(--grayish-blue);
+  border-radius: 10px;
+}
+
+body input::-webkit-input-placeholder {
+  color: var(--grayish-blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+body input:-ms-input-placeholder {
+  color: var(--grayish-blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+body input::-ms-input-placeholder {
+  color: var(--grayish-blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+body input::placeholder {
+  color: var(--grayish-blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+body input[type="text"] {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+body input[type="email"] {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+body input[type="password"] {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+body button {
+  border: unset;
+  border-radius: 5px;
+  color: white;
+}
+
+body a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+body .alert {
+  display: none;
+  color: var(--red);
+  float: right;
+}
+
+body .alert-on {
+  display: block;
+}
+
+body .try {
+  background-color: var(--blue);
+  height: 70px;
+}
+
+body .try p {
+  line-height: 1.5rem;
+}
+
+body .try .bold {
+  font-weight: bolder;
+}
+
+body .claim {
+  background-color: var(--green);
+  height: 60px;
+  text-transform: uppercase;
+}
+
+body .bg {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+body .error {
+  border-color: var(--red);
+}
+
+body .init {
+  width: 100%;
+  position: relative;
+}
+
+body .error-img {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+body .error-show {
+  display: block;
+}
+
+body .main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 90%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 70%;
+      grid-template-rows: 30% 70%;
+}
+
+body .main .texts {
+  text-align: center;
+  width: 100%;
+}
+
+body .main .texts p {
+  margin-bottom: 50px;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+body .main .form {
+  width: 100%;
+}
+
+body .main .form .try {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+body .main .form .inputs {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90%;
+      grid-template-columns: 90%;
+  place-content: center;
+  padding-top: 10px;
+  border-radius: 10px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+body .main .form .inputs input {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+body .main .form .inputs .claim {
+  width: 100%;
+}
+
+body .main .form .inputs .claim:hover {
+  background-color: var(--green-hover);
+}
+
+body .main .form .inputs p {
+  color: var(--grayish-blue);
+  text-align: center;
+}
+
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body .attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  body .main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas: "texts forms";
+  }
+  body .main .texts {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: texts;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .main .texts .txt {
+    width: 90%;
+  }
+  body .main .texts .txt h1, body .main .texts .txt p {
+    text-align: left;
+  }
+  body .main .form {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: forms;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

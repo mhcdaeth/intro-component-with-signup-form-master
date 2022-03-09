@@ -1,0 +1,237 @@
+:root{
+    --red: hsl(0,100%,74%);
+    --green: hsl(154, 59%, 51%);
+    --green-hover: hsla(154, 59%, 51%, 0.748);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%) ;
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+
+    h1,p,span{
+        color: white;
+    }
+    
+    input{
+        border: 1px solid var(--grayish-blue);
+        border-radius: 10px;
+    }
+
+    input::placeholder{
+        color: var(--grayish-blue);
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    }
+
+    input[type="text"]{
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    input[type="email"]{
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    input[type="password"]{
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    button{
+        border: unset;
+        border-radius: 5px;
+        color: white;
+    }
+
+    a{
+        color: var(--red);
+        text-decoration: none;
+    }
+
+    .alert{
+        display: none;
+        color: var(--red);
+        float: right;
+    }
+
+    .alert-on {
+        display: block;
+    }
+
+    .try{
+        background-color: var(--blue);
+        height: 70px;
+
+        p{
+            line-height: 1.5rem;
+        }
+
+        .bold{
+            font-weight: bolder;
+        }
+    }
+
+    .claim{
+        background-color: var(--green);
+        height: 60px;
+        text-transform: uppercase;
+    }
+
+    .bg{
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .error{
+        border-color: var(--red);
+    }
+
+    .init{
+        width: 100%;
+        position: relative;
+    }
+
+    .error-img{
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+
+    .error-show{
+        display: block;
+    }
+    
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--red);
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 95% 5%;
+    place-items: center;
+
+    .main{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 90%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+
+        .texts{
+            text-align: center;
+            width: 100%;
+
+            p {
+                margin-bottom: 50px;
+                line-height: 1.5rem;
+                text-align: center;
+            }
+
+        }
+
+        .form{
+            width: 100%;
+
+            .try{
+                margin-bottom: 30px;
+                width: 100%;
+            }
+            
+            .inputs{
+                background-color: white;
+                display: grid;
+                grid-template-columns: 90%;
+                place-content: center;
+                padding-top: 10px;
+                border-radius: 10px;
+                padding: 20px 0;
+
+                width: 100%;
+
+                input{
+                    height: 50px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                }
+
+                .claim{
+                    width: 100%;
+                }
+
+                .claim:hover{
+                    background-color: var(--green-hover);
+                }
+
+                p{
+                    color: var(--grayish-blue);
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    
+    .attribution { 
+        font-size: 11px; 
+        text-align: center;
+        
+        a { 
+            color: hsl(228, 45%, 44%); 
+        }
+    }
+
+    @media screen and (min-width: 376px){
+
+        height: 100vh;
+        overflow: hidden;
+            .main{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 100%;
+                grid-template-areas:
+                "texts forms" 
+                ;
+
+                
+
+                .texts{
+                    grid-area: texts;
+                    display: grid;
+                    align-items: center;
+
+                    .txt{
+                        width: 90%;
+
+                        h1, p{
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .form{
+                    grid-area: forms;
+                    display: grid;
+                    align-items: center;
+                }
+            }
+        
+    }
+     
+}
